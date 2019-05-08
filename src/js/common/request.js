@@ -27,6 +27,15 @@ const Request = {
     },
     remove(id) {
       return Ajax.postJson(`/todo/delete/${id}`);
+    },
+    allDone(params) {
+      return Ajax.postJson(`/todo/allDone`, params);
+    },
+    setStatus(params) {
+      return Ajax.postJson(`/todo/setStatus`, params);
+    },
+    removeCompleted() {
+      return Ajax.postJson(`/todo/removeCompleted`);
     }
   },
 };
